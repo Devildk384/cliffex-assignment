@@ -1,56 +1,65 @@
 import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
 import './App.css';
+import Header from './components/Header';
+
+
+import { useSelector } from "react-redux";
+import {selectItemList,savedItemList} from "./features/itemSlice";
+import Input from './components/Input';
+import ListItem from './components/ListItem';
+import SaveItem from './components/SaveItem';
+import Signup from './components/Signup';
 
 function App() {
+
+  const itemList = useSelector(selectItemList)
+  const saveItemList = useSelector(savedItemList);
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+    <div className="app">
+      <Header />
+      <div className="app__body">
+
+      <Signup />
+      {/* <div className="app__body-left">
+      <div className="app__list-container">
+         {itemList.map((item,index) => (
+           <ListItem
+            key={index}
+            name={item.item}
+            done={item.done}
+            id={item.id}
+           
+            />
+         ))}
+
+      </div>
+
+      <Input />
+
+      </div>
+
+      <div className="app__body-right">
+
+      <div className="app__savelist-container">
+         {saveItemList.map((item) => (
+           
+           <SaveItem
+            key={item}
+            name={item}
+           
+           
+            />
+         ))}
+
+      </div>
+
+      </div> */}
+
+
+      </div>
+     
     </div>
   );
 }

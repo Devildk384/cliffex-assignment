@@ -1,39 +1,101 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app{
+  width: 100%;
+  height: 100vh;
+  background-color:rgb(182, 235, 228);
+  place-items: center; 
+ 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
+@media only screen and (max-width: 500px) {
+  .app{
+   width: 100%;
+   height: 100%;
+  }
+}
+.app__body{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+@media only screen and (max-width: 500px) {
+  .app__body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
-.App-header {
-  min-height: 100vh;
+.app__body-left{
+  height: 500px;
+  width: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: rgb(232, 234, 237);
+  border-radius: 12px;
+  padding: 32px 0;
+}
+@media only screen and (max-width: 800px) {
+  .app__body-left{
+    height: 400px;
+    width: 300px;
+  }
 }
 
-.App-link {
-  color: rgb(112, 76, 182);
+@media only screen and (max-width: 500px) {
+  .app__body-left{
+    height: 300px;
+    width: 300px;
+  }
 }
 
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
+
+
+
+.app__list-container{
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app__body-right{
+  height: 500px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(232, 234, 237);
+  border-radius: 12px;
+  padding: 32px 0;
+}
+
+@media only screen and (max-width: 800px) {
+  .app__body-right{
+    height: 400px;
+    width: 300px;
   }
-  50% {
-    transform: translateY(10px)
+}
+
+@media only screen and (max-width: 500px) {
+  .app__body-right{
+    margin-top: 20px;
+    height: 300px;
+    width: 300px;
   }
-  100% {
-    transform: translateY(0px)
-  }
+}
+
+.app__savelist-container{
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

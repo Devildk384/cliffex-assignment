@@ -1,0 +1,35 @@
+.input{
+    width: 80%;
+    height: 50px;
+    border-radius: 12px;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+input {
+    background: none;
+    border: none;
+    margin-left: 12px;
+    flex: 1;
+}
+input:focus {
+    outline: none;
+}
+
+button{ 
+    margin-right: 8px;
+    background-color: rgb(214, 213, 213);
+    border: none;
+    border-radius: 10px;
+    height: 30px;
+    width: 50px;
+}
+
+button:focus{
+    outline: none;
+    cursor: pointer;
+}
+
