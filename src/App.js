@@ -21,8 +21,8 @@ function App() {
       <Header />
       <div className="app__body">
 
-      <Signup />
-      {/* <div className="app__body-left">
+      {/* <Signup /> */}
+      <div className="app__body-left">
       <div className="app__list-container">
          {itemList.map((item,index) => (
            <ListItem
@@ -55,7 +55,7 @@ function App() {
 
       </div>
 
-      </div> */}
+      </div>
 
 
       </div>
